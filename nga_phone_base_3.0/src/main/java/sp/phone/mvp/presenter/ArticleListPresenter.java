@@ -55,7 +55,7 @@ public class ArticleListPresenter extends BasePresenter<ArticleListFragment, Art
         public void onError(String msg, Throwable t) {
             onError(msg);
             if (t instanceof ArticleListModel.ServerException) {
-                showWithWebView();
+                mBaseView.finish();
             }
         }
 
